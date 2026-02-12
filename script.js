@@ -2,9 +2,7 @@
  * RESPONSIVE WARNING *
  *********************/
 const responsiveWarning = document.getElementById("responsive-warning");
-// "true" if the site is optimized for responsive design, "false" if not.
 const responsiveDesign = false;
-// Show mobile warning if the user is on mobile and responsive-design is false.
 if (!responsiveDesign && window.innerWidth <= 768) {
     responsiveWarning.classList.add("show");
 }
@@ -12,12 +10,10 @@ if (!responsiveDesign && window.innerWidth <= 768) {
 /***********************
  * MODE TOGGLE BEHAVIOR *
  ***********************/
-// Get elements that change with the mode.
 const toggleModeBtn = document.getElementById("toggle-mode-btn");
 const portfolioLink = document.getElementById("portfolio-link");
 const body = document.body;
 
-// Function to apply mode.
 function applyMode(mode) {
     body.classList.remove("light-mode", "dark-mode");
     body.classList.add(mode);
@@ -34,21 +30,14 @@ function applyMode(mode) {
     }
 }
 
-// Check and apply saved mode on page load.
 let savedMode = localStorage.getItem("mode");
 if (savedMode === null) {
-    savedMode = "light-mode"; // Default mode.
+    savedMode = "light-mode";
 }
 applyMode(savedMode);
 
-// Toggle mode and save preference.
 toggleModeBtn.addEventListener("click", function () {
-    let newMode;
-    if (body.classList.contains("light-mode")) {
-        newMode = "dark-mode";
-    } else {
-        newMode = "light-mode";
-    }
+    let newMode = body.classList.contains("light-mode") ? "dark-mode" : "light-mode";
     applyMode(newMode);
     localStorage.setItem("mode", newMode);
 });
