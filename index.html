@@ -1,339 +1,494 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>22 Songs for You 💕</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Mali:wght@400;600&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style-new.css">
+    <title>Flip Book</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-    <div class="background-hearts"></div>
-    
-    <div class="container">
-        <div class="book-container">
-            <div class="book" id="book">
-                <!-- Front Cover (shows before opening) -->
-                <div class="spread" data-spread="0">
-                    <div class="page-left empty"></div>
-                    <div class="page-right cover-page">
-                        <h1 class="cover-title">22 Songs<br>22 Reasons</h1>
-                        <div class="heart-doodle">💕</div>
-                        <p class="cover-subtitle">A playlist made with love</p>
-                        <p class="cover-instruction">Click Next to open →</p>
-                    </div>
-                </div>
+    <main>
+        <input type="checkbox" id="cover_checkbox">
+        <input type="checkbox" id="page1_checkbox">
+        <input type="checkbox" id="page2_checkbox">
+        <input type="checkbox" id="page3_checkbox">
+        <input type="checkbox" id="page4_checkbox">
+        <input type="checkbox" id="page5_checkbox">
+        <input type="checkbox" id="page6_checkbox">
+        <input type="checkbox" id="page7_checkbox">
+        <input type="checkbox" id="page8_checkbox">
+        <input type="checkbox" id="page9_checkbox">
+        <input type="checkbox" id="page10_checkbox">
+        <input type="checkbox" id="page11_checkbox">
+        <input type="checkbox" id="page12_checkbox">
+        <input type="checkbox" id="page13_checkbox">
+        <input type="checkbox" id="page14_checkbox">
+        <input type="checkbox" id="page15_checkbox">
+        <input type="checkbox" id="page16_checkbox">
+        <input type="checkbox" id="page17_checkbox">
+        <input type="checkbox" id="page18_checkbox">
+        <input type="checkbox" id="page19_checkbox">
+        <input type="checkbox" id="page20_checkbox">
+        <input type="checkbox" id="page21_checkbox">
+        <input type="checkbox" id="page22_checkbox">
+        <input type="checkbox" id="page23_checkbox">
 
-                <!-- Song 1: Who Knows -->
-                <div class="spread" data-spread="1">
-                    <div class="page-left">
-                        <div class="song-number">01</div>
-                        <h2 class="song-title">Who Knows</h2>
-                        <div class="doodle">🎵</div>
-                        <div class="album-art-placeholder">🎵</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here - what does this song represent for you two?]</p>
-                    </div>
-                </div>
+        <div id="flip_book">
+            <div class="front_cover">
+                <label for="cover_checkbox" id="cover"></label>
+            </div>
 
-                <!-- Song 2: I Thought I Saw Your Face Today -->
-                <div class="spread" data-spread="2">
-                    <div class="page-left">
-                        <div class="song-number">02</div>
-                        <h2 class="song-title">I Thought I Saw Your Face Today</h2>
-                        <div class="doodle">👀</div>
-                        <div class="album-art-placeholder">👀</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
+            <!-- PAGE 1 (front: empty | back: Song 1 title) -->
+            <div class="page" id="page1">
+                <div class="front_page">
+                    <label for="page1_checkbox"></label>
                 </div>
-
-                <!-- Song 3: Ur So Pretty -->
-                <div class="spread" data-spread="3">
-                    <div class="page-left">
-                        <div class="song-number">03</div>
-                        <h2 class="song-title">Ur So Pretty</h2>
-                        <div class="doodle">✨</div>
-                        <div class="album-art-placeholder">✨</div>
+                <div class="back_page">
+                    <label for="page1_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">01</div>
+                        <div class="song_name">Who Knows</div>
+                        <div class="song_artist">Daniel Caesar</div>
                     </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 4: Kiss Me -->
-                <div class="spread" data-spread="4">
-                    <div class="page-left">
-                        <div class="song-number">04</div>
-                        <h2 class="song-title">Kiss Me</h2>
-                        <div class="doodle">💋</div>
-                        <div class="album-art-placeholder">💋</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 5: Love. -->
-                <div class="spread" data-spread="5">
-                    <div class="page-left">
-                        <div class="song-number">05</div>
-                        <h2 class="song-title">Love.</h2>
-                        <div class="doodle">❤️</div>
-                        <div class="album-art-placeholder">❤️</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 6: Always -->
-                <div class="spread" data-spread="6">
-                    <div class="page-left">
-                        <div class="song-number">06</div>
-                        <h2 class="song-title">Always</h2>
-                        <div class="doodle">♾️</div>
-                        <div class="album-art-placeholder">♾️</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 7: Nothing -->
-                <div class="spread" data-spread="7">
-                    <div class="page-left">
-                        <div class="song-number">07</div>
-                        <h2 class="song-title">Nothing</h2>
-                        <div class="doodle">🌙</div>
-                        <div class="album-art-placeholder">🌙</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 8: No 1 Party Anthem -->
-                <div class="spread" data-spread="8">
-                    <div class="page-left">
-                        <div class="song-number">08</div>
-                        <h2 class="song-title">No 1 Party Anthem</h2>
-                        <div class="doodle">🎉</div>
-                        <div class="album-art-placeholder">🎉</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 9: Sweet Boy -->
-                <div class="spread" data-spread="9">
-                    <div class="page-left">
-                        <div class="song-number">09</div>
-                        <h2 class="song-title">Sweet Boy</h2>
-                        <div class="doodle">🍯</div>
-                        <div class="album-art-placeholder">🍯</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 10: Labyrinth -->
-                <div class="spread" data-spread="10">
-                    <div class="page-left">
-                        <div class="song-number">10</div>
-                        <h2 class="song-title">Labyrinth</h2>
-                        <div class="doodle">🌀</div>
-                        <div class="album-art-placeholder">🌀</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 11: Love feat Zacari -->
-                <div class="spread" data-spread="11">
-                    <div class="page-left">
-                        <div class="song-number">11</div>
-                        <h2 class="song-title">Love feat Zacari</h2>
-                        <div class="doodle">💖</div>
-                        <div class="album-art-placeholder">💖</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 12: Paris -->
-                <div class="spread" data-spread="12">
-                    <div class="page-left">
-                        <div class="song-number">12</div>
-                        <h2 class="song-title">Paris</h2>
-                        <div class="doodle">🗼</div>
-                        <div class="album-art-placeholder">🗼</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 13: Call Me Up -->
-                <div class="spread" data-spread="13">
-                    <div class="page-left">
-                        <div class="song-number">13</div>
-                        <h2 class="song-title">Call Me Up</h2>
-                        <div class="doodle">📞</div>
-                        <div class="album-art-placeholder">📞</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 14: Chest Pain (I Love) -->
-                <div class="spread" data-spread="14">
-                    <div class="page-left">
-                        <div class="song-number">14</div>
-                        <h2 class="song-title">Chest Pain (I Love)</h2>
-                        <div class="doodle">💓</div>
-                        <div class="album-art-placeholder">💓</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 15: Sure Thing -->
-                <div class="spread" data-spread="15">
-                    <div class="page-left">
-                        <div class="song-number">15</div>
-                        <h2 class="song-title">Sure Thing</h2>
-                        <div class="doodle">✓</div>
-                        <div class="album-art-placeholder">✓</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 16: Cold Water -->
-                <div class="spread" data-spread="16">
-                    <div class="page-left">
-                        <div class="song-number">16</div>
-                        <h2 class="song-title">Cold Water</h2>
-                        <div class="doodle">💧</div>
-                        <div class="album-art-placeholder">💧</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 17: Top Tier -->
-                <div class="spread" data-spread="17">
-                    <div class="page-left">
-                        <div class="song-number">17</div>
-                        <h2 class="song-title">Top Tier</h2>
-                        <div class="doodle">👑</div>
-                        <div class="album-art-placeholder">👑</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 18: Just The Way You Are -->
-                <div class="spread" data-spread="18">
-                    <div class="page-left">
-                        <div class="song-number">18</div>
-                        <h2 class="song-title">Just The Way You Are</h2>
-                        <div class="doodle">🌟</div>
-                        <div class="album-art-placeholder">🌟</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 19: This Love -->
-                <div class="spread" data-spread="19">
-                    <div class="page-left">
-                        <div class="song-number">19</div>
-                        <h2 class="song-title">This Love</h2>
-                        <div class="doodle">💝</div>
-                        <div class="album-art-placeholder">💝</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 20: You Da One -->
-                <div class="spread" data-spread="20">
-                    <div class="page-left">
-                        <div class="song-number">20</div>
-                        <h2 class="song-title">You Da One</h2>
-                        <div class="doodle">1️⃣</div>
-                        <div class="album-art-placeholder">1️⃣</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 21: Adventure of a Lifetime -->
-                <div class="spread" data-spread="21">
-                    <div class="page-left">
-                        <div class="song-number">21</div>
-                        <h2 class="song-title">Adventure of a Lifetime</h2>
-                        <div class="doodle">🌍</div>
-                        <div class="album-art-placeholder">🌍</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Song 22: Roses -->
-                <div class="spread" data-spread="22">
-                    <div class="page-left">
-                        <div class="song-number">22</div>
-                        <h2 class="song-title">Roses</h2>
-                        <div class="doodle">🌹</div>
-                        <div class="album-art-placeholder">🌹</div>
-                    </div>
-                    <div class="page-right">
-                        <p class="song-meaning">[Your meaning here]</p>
-                    </div>
-                </div>
-
-                <!-- Back Cover (shows after closing) -->
-                <div class="spread" data-spread="23">
-                    <div class="page-left back-cover">
-                        <div class="heart-big">💕</div>
-                        <p class="back-message">Made with love for you</p>
-                        <p class="back-date">Valentine's Day 2025</p>
-                    </div>
-                    <div class="page-right empty"></div>
                 </div>
             </div>
+
+            <!-- PAGE 2 (front: Song 1 note | back: Song 2 title) -->
+            <div class="page" id="page2">
+                <div class="front_page">
+                    <label for="page2_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">01</div>
+                        <p>I wanted to start with this song because it makes me cry every time I hear it, but it's such a beautiful song. Whenever I listen to it, I can't help but think about all the possibilities we could have in the future together. I know the road ahead is uncertain, be it as individuals or as a couple, and there's so much we'll need to figure out as we grow older. But I hope you'll be there with me through it all. I love you, and I hope you like this gift.</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page2_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">02</div>
+                        <div class="song_name">I Thought I Saw Your Face Today</div>
+                        <div class="song_artist">She & Him</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 3 (front: Song 2 note | back: Song 3 title) -->
+            <div class="page" id="page3">
+                <div class="front_page">
+                    <label for="page3_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">02</div>
+                        <p>I'm a very nostalgic person and I love reminiscing about the moments we used to have. I bet you didn't know this, but I have a notes entry on my phone where I documented everything I felt before we got together. All the times we went on walks and all the times you sent me home. It's all in there, HAHA. My memory can be bad sometimes, so I like to document everything so I won't forget.</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page3_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">03</div>
+                        <div class="song_name">ur so pretty</div>
+                        <div class="song_artist">Wasia Project</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 4 (front: Song 3 note | back: Song 4 title) -->
+            <div class="page" id="page4">
+                <div class="front_page">
+                    <label for="page4_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">03</div>
+                        <p>This is such an underrated song, but the lyrics are so well written. You should give it a listen. It basically translates whatever I feel in my heart into words.</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page4_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">04</div>
+                        <div class="song_name">Kiss Me</div>
+                        <div class="song_artist">Sixpence None The Richer</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 5 (front: Song 4 note | back: Song 5 title) -->
+            <div class="page" id="page5">
+                <div class="front_page">
+                    <label for="page5_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">04</div>
+                        <p>OK, this song is so goated. It's literally the perfect romance song. I feel like I've heard it in an ad before, but I don't know where. Whenever it comes on, I just feel happy and silly and goofy, HAHA. So yes, kiss me! That doesn't really make sense, but it doesn't matter.</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page5_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">05</div>
+                        <div class="song_name">love.</div>
+                        <div class="song_artist">wave to earth</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 6 (front: Song 5 note | back: Song 6 title) -->
+            <div class="page" id="page6">
+                <div class="front_page">
+                    <label for="page6_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">05</div>
+                        <p>How could I not include a wave to earth song in this playlist? The song is about how love breaks down your personal defences and allows you to be vulnerable with your partner. I think you know how sensitive I am. I used to always keep my guard up because I was afraid that if I opened up entirely, you'd realise I'm not always the happy girl you see and maybe leave. But you proved me wrong, countless times. Thank you for being patient with me. I'm trying, I promise.</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page6_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">06</div>
+                        <div class="song_name">Always</div>
+                        <div class="song_artist">Daniel Caesar</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 7 (front: Song 6 note | back: Song 7 title) -->
+            <div class="page" id="page7">
+                <div class="front_page">
+                    <label for="page7_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">06</div>
+                        <p>You will forever be my baby, hehe. I'll always be here for you. Whenever life gets too difficult, just reach out to me. I'll always try to show up for the moments that matter, because I know how much showing up can mean. I love this song, it's so calm and soothing. But one line I can't stand is "and I don't care if you're with somebody else." I do care. I'm a Leo and I don't say this often, but I get jealous very easily. I won't show it, but I'll remember it in my heart, HAHA.</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page7_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">07</div>
+                        <div class="song_name">Nothing</div>
+                        <div class="song_artist">Bruno Major</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 8 (front: Song 7 note | back: Song 8 title) -->
+            <div class="page" id="page8">
+                <div class="front_page">
+                    <label for="page8_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">07</div>
+                        <p>I don't say this enough, but I'm so grateful you're mine. I'm grateful for all the silly and serious conversations we've had, for all the little surprises like the matcha cake, hehe. I'm grateful to have someone I can rely on, someone who motivates me to become a better version of myself. Thank you for believing in me even when I doubt myself. I love youuuu.</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page8_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">08</div>
+                        <div class="song_name">Open Arms</div>
+                        <div class="song_artist">SZA ft. Travis Scott</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 9 (front: Song 8 note | back: Song 9 title) -->
+            <div class="page" id="page9">
+                <div class="front_page">
+                    <label for="page9_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">08</div>
+                        <p>Inject this song into me. Locked in for life, on God, no replacing me. Okay, hear me out: this song seems sad because it keeps saying "I need to let you go" and "you're the only one holding me down." But nuh-uh, that's not how I see it. I hope you can see that in this relationship, we're not forced to stay the same. I want us to grow into better people and become better versions of ourselves!</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page9_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">09</div>
+                        <div class="song_name">Sweet Boy</div>
+                        <div class="song_artist">Malcolm Todd</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 10 (front: Song 9 note | back: Song 10 title) -->
+            <div class="page" id="page10">
+                <div class="front_page">
+                    <label for="page10_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">09</div>
+                        <p>This is me when I'm out, my social battery has completely died, and all I want is to go home to you.</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page10_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">10</div>
+                        <div class="song_name">Labyrinth</div>
+                        <div class="song_artist">Taylor Swift</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 11 (front: Song 10 note | back: Song 11 title) -->
+            <div class="page" id="page11">
+                <div class="front_page">
+                    <label for="page11_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">10</div>
+                        <p>I don't know how you do it, but I don't just fall in love with you once. There are so many moments where I just think, "damn, I love this man." I love falling in love with you over and over again. It reminds me how lucky I am to have someone to laugh, live, and love with.</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page11_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">11</div>
+                        <div class="song_name">LOVE.</div>
+                        <div class="song_artist">Kendrick Lamar ft. Zacari</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 12 (front: Song 11 note | back: Song 12 title) -->
+            <div class="page" id="page12">
+                <div class="front_page">
+                    <label for="page12_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">11</div>
+                        <p>I wanna be with you. If I became a dog, would you still love me? I'm kidding, HAHA. Enjoy the song!</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page12_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">12</div>
+                        <div class="song_name">Paris</div>
+                        <div class="song_artist">The Chainsmokers</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 13 (front: Song 12 note | back: Song 13 title) -->
+            <div class="page" id="page13">
+                <div class="front_page">
+                    <label for="page13_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">12</div>
+                        <p>Hehehe, I hope we can go to Paris one day, not to escape, but to explore the city together. That's a dream for the future. I know things with my family aren't perfect right now, but don't worry. I know we can do better, and I hope that one day, she'll see exactly why I chose you.</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page13_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">13</div>
+                        <div class="song_name">call me up</div>
+                        <div class="song_artist">Zy, San Leng Jing</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 14 (front: Song 13 note | back: Song 14 title) -->
+            <div class="page" id="page14">
+                <div class="front_page">
+                    <label for="page14_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">13</div>
+                        <p>This is another underrated R&amp;B song. I love the beat and the rhythm. Do I know the lyrics by heart? Nope. Is it a vibe? Absolutely. Call me up whenever you miss me.</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page14_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">14</div>
+                        <div class="song_name">Chest Pain (I Love)</div>
+                        <div class="song_artist">Malcolm Todd</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 15 (front: Song 14 note | back: Song 15 title) -->
+            <div class="page" id="page15">
+                <div class="front_page">
+                    <label for="page15_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">14</div>
+                        <p>I love you. I love your smile. I love your muscles (I'm just a girl, okay). I love how you treat the elderly. I love how you look at me with so much love in your eyes. I love how you reassure me whenever I get overwhelmed. I love how you make time for me even when your schedule is packed. I love how one hug from you is enough to calm me down instantly. I love your existence. I love you so much. It's honestly kind of insane.</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page15_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">15</div>
+                        <div class="song_name">Sure Thing</div>
+                        <div class="song_artist">Miguel</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 16 (front: Song 15 note | back: Song 16 title) -->
+            <div class="page" id="page16">
+                <div class="front_page">
+                    <label for="page16_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">15</div>
+                        <p>You're my best friend and my lover all in one. I'm pretty sure this love is a sure thing, I've got faith in you and me. So whenever things get difficult, just know I'm not giving up. Never back down, never what...? Exactly.</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page16_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">16</div>
+                        <div class="song_name">Cold Water</div>
+                        <div class="song_artist">Major Lazer ft. Justin Bieber & MØ</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 17 (front: Song 16 note | back: Song 17 title) -->
+            <div class="page" id="page17">
+                <div class="front_page">
+                    <label for="page17_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">16</div>
+                        <p>Oh my gosh, I stumbled across this song the other day and it brought back so many memories. I used to spam it when I was younger, it was always on the radio. Anyway, I hope you know that I won't let go. When we argue, I hope we can always talk it out and grow from it.</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page17_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">17</div>
+                        <div class="song_name">Top Tier</div>
+                        <div class="song_artist">sunkis</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 18 (front: Song 17 note | back: Song 18 title) -->
+            <div class="page" id="page18">
+                <div class="front_page">
+                    <label for="page18_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">17</div>
+                        <p>I kinda really like you, can I be included in your plans? And maybe your life, forever? 😁👍 To my 10/10, please say yes. The beat on this song is SO good, eh.</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page18_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">18</div>
+                        <div class="song_name">Just the Way You Are</div>
+                        <div class="song_artist">Bruno Mars</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 19 (front: Song 18 note | back: Song 19 title) -->
+            <div class="page" id="page19">
+                <div class="front_page">
+                    <label for="page19_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">18</div>
+                        <p>It just feels right to have a Bruno Mars song in this playlist, HAHA. So yes, you're amazing just the way you are. It might sound cheesy, but you should smile more! Everyone has their flaws. Including me and that's okay. Nobody's perfect. But I love you for exactly who you are: a good mix of humour, intelligence (I'm kidding, I know you're smart), and so much love. Hehehe.</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page19_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">19</div>
+                        <div class="song_name">Roses</div>
+                        <div class="song_artist">The Chainsmokers ft. ROZES</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 20 (front: Song 19 note | back: Song 20 title) -->
+            <div class="page" id="page20">
+                <div class="front_page">
+                    <label for="page20_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">19</div>
+                        <p>Oh, another hit. This song is SO nostalgic, inject it into me. Take it slow, but it's not typical. He already knows that my love is fire. His heart was a stone, but then his hands roam. I turned him to gold and it took him higher. I'll be your daydream, I'll wear your favourite things. Get drunk on a good life, I'll take you to paradise. Say you'll never let me go. 🌹</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page20_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">20</div>
+                        <div class="song_name">This Love</div>
+                        <div class="song_artist">Maroon 5</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 21 (front: Song 20 note | back: Song 21 title) -->
+            <div class="page" id="page21">
+                <div class="front_page">
+                    <label for="page21_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">20</div>
+                        <p>Okay, so I just looked it up and apparently this song is about an abusive relationship. That is NOT what I'm going for here. I just put it in because I love the melody. I genuinely thought it was a happy song... it still sounds really nice though.</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page21_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">21</div>
+                        <div class="song_name">You Da One</div>
+                        <div class="song_artist">Rihanna</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 22 (front: Song 21 note | back: Song 22 title) -->
+            <div class="page" id="page22">
+                <div class="front_page">
+                    <label for="page22_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">21</div>
+                        <p>My love is your love, your love is my love. Whatever Rihanna said, I'm co-signing all of it. Whenever I listen to this song, you just automatically come to mind, HAHA.</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page22_checkbox"></label>
+                    <div class="song_title_page">
+                        <div class="song_number">22</div>
+                        <div class="song_name">Adventure of a Lifetime</div>
+                        <div class="song_artist">Coldplay</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 23 (front: Song 22 note | back: empty last page) -->
+            <div class="page" id="page23">
+                <div class="front_page">
+                    <label for="page23_checkbox"></label>
+                    <div class="song_note_page">
+                        <div class="note_number">22</div>
+                        <p>The final song. I saved the best for last. You might not know this, but this was the song I used to soft launch us on IG (I posted us on my CFL), HAHA. So it holds a very special place in my heart. Whenever I hear it, I'm brought back to the day you asked me out. I kid you not, my heart was beating so fast. You made me feel alive again. I can't wait to explore the world with you someday! Japan for matcha, hiking, bungee jumping, all of it. Whatever it is, I want to experience it for the first time with you. I hope you enjoyed the playlist and these little notes. I love you, bb!</p>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <label for="page23_checkbox"></label>
+                </div>
+            </div>
+
+            <div class="back_cover"></div>
         </div>
 
-        <!-- Navigation -->
-        <div class="navigation">
-            <button id="prevBtn" class="nav-btn">← Previous</button>
-            <span class="page-counter">
-                <span id="currentSpread">1</span> / <span id="totalSpreads">24</span>
-            </span>
-            <button id="nextBtn" class="nav-btn">Next →</button>
-        </div>
-    </div>
+        <!-- Toggle mode button -->
+        <button id="toggle-mode-btn">
+            <i class="bi bi-moon-stars-fill"></i>
+        </button>
 
-    <script src="script-new.js"></script>
+        <a id="portfolio-link" href="https://www.fchavonet.dev" target="_blank">www.fchavonet.dev</a>
+
+        <a id="github-link" href="https://github.com/fchavonet/creative_coding-flip_book" target="_blank">
+            <img src="https://img.shields.io/github/stars/fchavonet/creative_coding-flip_book?style=social&label=GitHub%20Stars" alt="GitHub Stars">
+        </a>
+
+        <div id="responsive-warning">
+            <i class="bi bi-exclamation-triangle warning-icons"></i>
+            <p>This web application is not optimized for mobile.</p>
+            <p>Please visit it on a desktop computer for the best experience.</p>
+        </div>
+    </main>
 </body>
 </html>

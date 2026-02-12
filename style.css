@@ -1,0 +1,336 @@
+/* RESET CSS */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* VARIABLES */
+:root {
+    --dark-color: rgb(2, 4, 8);
+    --dark-hover: rgba(255, 255, 255, 0.1);
+    --light-color: rgb(245, 245, 245);
+    --light-hover: rgba(0, 0, 0, 0.1);
+}
+
+/* GENERAL */
+body {
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace, sans-serif;
+    font-size: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+body.light-mode {
+    color: var(--dark-color);
+    background-color: var(--light-color);
+}
+
+body.light-mode #toggle-mode-btn:hover {
+    background-color: var(--light-hover);
+}
+
+body.dark-mode {
+    color: var(--light-color);
+    background-color: var(--dark-color);
+}
+
+body.dark-mode #toggle-mode-btn:hover {
+    background-color: var(--dark-hover);
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+input {
+    display: none;
+}
+
+/* MAIN */
+#toggle-mode-btn {
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+#portfolio-link {
+    padding-right: 0.5rem;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    font-size: 0.75rem;
+}
+
+#github-link {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+/* RESPONSIVE WARNING */
+#responsive-warning {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    z-index: 9999;
+}
+
+.warning-icons {
+    font-size: 10rem;
+}
+
+@media (max-width: 768px) {
+    #responsive-warning.show {
+        display: flex;
+    }
+}
+
+/* FLIP BOOK */
+#flip_book {
+    width: 298px;
+    height: 420px;
+    position: relative;
+    transition-duration: 1s;
+    perspective: 2000px;
+}
+
+.front_cover,
+.back_cover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2.5px 5px 5px 2.5px;
+    background-color: rgb(220, 20, 60);
+    box-shadow: 0 0 5px 0 rgb(25, 25, 25, 0.25);
+}
+
+.front_cover {
+    position: absolute;
+    cursor: pointer;
+    transform-origin: center left;
+    transition: transform 0.5s;
+    z-index: 99;
+}
+
+.front_cover label {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.page {
+    width: 288px;
+    height: 400px;
+    position: absolute;
+    top: 10px;
+    left: 1px;
+    border-radius: 0 5px 5px 0;
+    background-color: white;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition-duration: 0.5s;
+}
+
+.front_page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.front_page label {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.back_page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    z-index: 100;
+    overflow: hidden;
+}
+
+.back_page label {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.back_cover {
+    position: relative;
+    z-index: -1;
+}
+
+/* Z-INDEX for 23 pages */
+#page1  { z-index: 46; }
+#page2  { z-index: 44; }
+#page3  { z-index: 42; }
+#page4  { z-index: 40; }
+#page5  { z-index: 38; }
+#page6  { z-index: 36; }
+#page7  { z-index: 34; }
+#page8  { z-index: 32; }
+#page9  { z-index: 30; }
+#page10 { z-index: 28; }
+#page11 { z-index: 26; }
+#page12 { z-index: 24; }
+#page13 { z-index: 22; }
+#page14 { z-index: 20; }
+#page15 { z-index: 18; }
+#page16 { z-index: 16; }
+#page17 { z-index: 14; }
+#page18 { z-index: 12; }
+#page19 { z-index: 10; }
+#page20 { z-index: 8;  }
+#page21 { z-index: 6;  }
+#page22 { z-index: 4;  }
+#page23 { z-index: 2;  }
+
+/* COVER OPEN */
+#cover_checkbox:checked ~ #flip_book {
+    transform: translateX(144px);
+}
+
+#cover_checkbox:checked ~ #flip_book .front_cover {
+    transform: rotateY(-180deg);
+    transition: transform 1.5s, z-index 0.5s 0.5s;
+    z-index: 1;
+}
+
+#cover_checkbox:checked ~ #flip_book #cover {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+}
+
+/* FLIP PAGES — flipped z-index increases so latest flip is always on top */
+#page1_checkbox:checked  ~ #flip_book #page1  { transform: rotateY(-180deg); z-index: 3;  }
+#page2_checkbox:checked  ~ #flip_book #page2  { transform: rotateY(-180deg); z-index: 5;  }
+#page3_checkbox:checked  ~ #flip_book #page3  { transform: rotateY(-180deg); z-index: 7;  }
+#page4_checkbox:checked  ~ #flip_book #page4  { transform: rotateY(-180deg); z-index: 9;  }
+#page5_checkbox:checked  ~ #flip_book #page5  { transform: rotateY(-180deg); z-index: 11; }
+#page6_checkbox:checked  ~ #flip_book #page6  { transform: rotateY(-180deg); z-index: 13; }
+#page7_checkbox:checked  ~ #flip_book #page7  { transform: rotateY(-180deg); z-index: 15; }
+#page8_checkbox:checked  ~ #flip_book #page8  { transform: rotateY(-180deg); z-index: 17; }
+#page9_checkbox:checked  ~ #flip_book #page9  { transform: rotateY(-180deg); z-index: 19; }
+#page10_checkbox:checked ~ #flip_book #page10 { transform: rotateY(-180deg); z-index: 21; }
+#page11_checkbox:checked ~ #flip_book #page11 { transform: rotateY(-180deg); z-index: 23; }
+#page12_checkbox:checked ~ #flip_book #page12 { transform: rotateY(-180deg); z-index: 25; }
+#page13_checkbox:checked ~ #flip_book #page13 { transform: rotateY(-180deg); z-index: 27; }
+#page14_checkbox:checked ~ #flip_book #page14 { transform: rotateY(-180deg); z-index: 29; }
+#page15_checkbox:checked ~ #flip_book #page15 { transform: rotateY(-180deg); z-index: 31; }
+#page16_checkbox:checked ~ #flip_book #page16 { transform: rotateY(-180deg); z-index: 33; }
+#page17_checkbox:checked ~ #flip_book #page17 { transform: rotateY(-180deg); z-index: 35; }
+#page18_checkbox:checked ~ #flip_book #page18 { transform: rotateY(-180deg); z-index: 37; }
+#page19_checkbox:checked ~ #flip_book #page19 { transform: rotateY(-180deg); z-index: 39; }
+#page20_checkbox:checked ~ #flip_book #page20 { transform: rotateY(-180deg); z-index: 41; }
+#page21_checkbox:checked ~ #flip_book #page21 { transform: rotateY(-180deg); z-index: 43; }
+#page22_checkbox:checked ~ #flip_book #page22 { transform: rotateY(-180deg); z-index: 45; }
+#page23_checkbox:checked ~ #flip_book #page23 { transform: rotateY(-180deg); z-index: 47; }
+
+/* SONG TITLE PAGE */
+.song_title_page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 24px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.song_number {
+    font-family: monospace;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: #aaa;
+}
+
+.song_name {
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #222;
+    line-height: 1.3;
+}
+
+.song_artist {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* SONG NOTE PAGE */
+.song_note_page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px 20px;
+    gap: 12px;
+    pointer-events: none;
+}
+
+.note_number {
+    font-family: monospace;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    color: #aaa;
+}
+
+.song_note_page p {
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: #444;
+    line-height: 1.7;
+}
