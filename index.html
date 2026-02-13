@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flip Book</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="script.js" defer></script>
+    <audio id="flip-sound" src="flip_book.mp3" preload="auto"></audio>
 </head>
 
 <body>
@@ -42,12 +46,20 @@
         <div id="flip_book">
             <div class="front_cover">
                 <label for="cover_checkbox" id="cover"></label>
+                <div class="cover_engraving">
+                    <img class="cover_flower" src="flower.png" alt="pixel flower">
+                    <div class="cover_engraving_sub">made with lots of love</div>
+                </div>
             </div>
 
             <!-- PAGE 1 (front: empty | back: Song 1 title) -->
             <div class="page" id="page1">
                 <div class="front_page">
                     <label for="page1_checkbox"></label>
+                    <div class="cover_page">
+                        <div class="intro">Happy Valentine's Day</div>
+                        <div class="cover_subtitle">A playlist for you ♡</div>
+                    </div>
                 </div>
                 <div class="back_page">
                     <label for="page1_checkbox"></label>
@@ -494,8 +506,15 @@
                 </div>
             </div>
 
-            <div class="back_cover"></div>
-        </div>
+            <!-- BACK COVER — inside flip_book so it positions correctly -->
+            <div class="back_cover">
+                <div class="cover_engraving">
+                    <img class="cover_cats" src="cats.png" alt="pixel cats">
+                    <div class="cover_engraving_sub">you and me, always forever</div>
+                </div>
+            </div>
+
+        </div><!-- end #flip_book -->
 
         <div id="responsive-warning">
             <i class="bi bi-exclamation-triangle warning-icons"></i>
